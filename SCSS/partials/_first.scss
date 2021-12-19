@@ -1,0 +1,145 @@
+// the background (For desktop)
+.div_first__first-image-desktop {
+  display: none;
+}
+
+// The background
+.div_first__second-image {
+  position: absolute;
+  top: -11%;
+  left: 0;
+}
+
+// These are the Title, Pragraph and Button
+.div_first__details {
+  @include displayFlex(column, none, center);
+  gap: 1rem;
+  padding: 1rem 1rem 5rem 1rem;
+}
+
+// Title
+.div_first__title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: $darkBlue;
+}
+
+// Paragraph
+.div_first__paragraph {
+  line-height: 1.5rem;
+  text-align: center;
+  color: $grayishBlue;
+}
+
+// Button
+.div_first__button {
+  position: relative;
+  background: linear-gradient(to right, $limeGreen, $brightCyan);
+  color: $white;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 25px;
+}
+
+// show the ::after in hover
+.div_first__button:hover::after {
+  display: block;
+}
+// ::after of div_first__button, it will only visible in hover;
+.div_first__button::after {
+  display: none;
+  position: absolute;
+  content: " ";
+  border-radius: 25px;
+  background-color: $white;
+  opacity: 0.3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .div_first__first-image-desktop {
+    max-height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  body,
+  html {
+    overflow-x: clip;
+    position: relative;
+  }
+
+  .div_first__content {
+    @include displayFlex(row-reverse, space-between, center);
+    padding: 10rem;
+    height: 90vh;
+    overflow-x: hidden;
+  }
+
+  .div_first__img-container {
+    height: 100%;
+    width: 50%;
+  }
+  .div_first__first-image {
+    display: none;
+  }
+  .div_first__mockup {
+    left: 56%;
+    top: -2%;
+    max-width: fit-content;
+  }
+
+  .div_first__first-image-desktop {
+    position: absolute;
+    display: inline-block;
+    width: 80%;
+    left: 50%;
+    right: 0;
+    top: -1%;
+    max-height: 100vh;
+  }
+
+  .div_first__details {
+    align-items: flex-start;
+    gap: 1.1rem;
+    padding-top: 8rem;
+  }
+
+  .div_first__title {
+    width: 15ch;
+  }
+
+  .div_first__paragraph {
+    width: 41ch;
+  }
+
+  .div_first__title,
+  .div_first__paragraph {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .div_first__mockup {
+    max-width: 50vw;
+  }
+
+  .div_first__first-image-desktop {
+    left: 45%;
+  }
+
+  .div_first__title {
+    font-size: 3rem;
+  }
+
+  .div_first__paragraph {
+    width: 41ch;
+  }
+}

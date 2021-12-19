@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./CSS/index.css">
   <title>Frontend Mentor | Easybank landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,8 +15,107 @@
   </style>
 </head>
 <body>
+  
+  <!-- Navbar for Mobile Screen Sizes -->
+  <nav class="nav_mobile">
+    <img class="nav_mobile__logo" src="./images/logo.svg" alt="">
+    <img class="nav_mobile__menu" src="./images/icon-hamburger.svg" alt="">
+  </nav>
 
-  Home
+  <!-- Navbar for Desktop sizes -->
+  <nav class="nav_desktop">
+
+    <div class="nav_desktop__main">
+      <img class="nav_desktop__logo" src="./images/logo.svg" alt="">
+      
+      <ul class="nav_desktop__link">
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Careers</a></li>
+      </ul>
+      
+      <button class="div_first__button nav_desktop__button">
+        Request Invite
+      </button>
+    </div>
+    
+  </nav>
+  
+    <img class="div_first__first-image-desktop" src="./images/bg-intro-desktop.svg" alt="">
+
+    <!-- Here's the main content -->
+    <div class="div_first__content">
+
+      <div class="div_first__img-container">
+        <img class="div_first__first-image" src="./images/bg-intro-mobile.svg" alt="">
+        
+        <img class="div_first__second-image div_first__mockup" src="./images/image-mockups.png" alt="">
+      </div>
+      
+      
+      <div class="div_first__details">
+        <h1 class="div_first__title">Next generation digital banking</h1>
+        <p class="div_first__paragraph">Take your financial life online. Your Easybank account will be a one-stop-shop for
+          spending, saving, budgeting, investing, and much more.</p>
+        <button class="div_first__button">Request Invite</button>
+      </div>
+    </div>
+    
+    <div class="div_second__content">
+
+      <section class="div_second__title-section">
+        <h1 class="title_section__title">
+          Why choose Easybank?
+        </h1>
+        <p class="title_section__paragraph">
+          We leverage Open Banking to turn your bank account into your financial hub. Control
+          your finances like never before.
+        </p>
+      </section>
+
+      <div class="div_second__infos">
+
+        <section class="infos__item">
+          <img src="./images/icon-online.svg" alt="">
+
+          <h1>Online Banking</h1>
+          <p>Our modern web and mobile applications allow you to keep track of your finances
+          wherever you are in the world.</p>
+        </section>
+
+        <section class="infos__item">
+          <img src="./images/icon-budgeting.svg" alt="">
+        
+          <h1>Simple Budgeting</h1>
+          <p>See exactly where your money goes each month. Receive notifications when you’re
+          close to hitting your limits.</p>
+        </section>
+
+        <section class="infos__item">
+          <img src="./images/icon-onboarding.svg" alt="">
+        
+          <h1>Fast Onboarding</h1>
+          <p>We don’t do branches. Open your account in minutes online and start taking control
+          of your finances right away.</p>
+        </section>
+
+        <section class="infos__item">
+          <img src="./images/icon-api.svg" alt="">
+        
+          <h1>Open API</h1>
+          <p>Manage your savings, investments, pension, and much more from one account. Tracking
+          your money has never been easier.</p>
+        </section>
+      </div>
+
+    </div>
+
+  <nav>
+    
+  </nav>
+  <!-- Home
   About
   Contact
   Blog
@@ -91,11 +190,11 @@
 
   Request Invite
 
-  © Easybank. All Rights Reserved
+  © Easybank. All Rights Reserved -->
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

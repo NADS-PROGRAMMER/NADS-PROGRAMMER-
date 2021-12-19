@@ -1,0 +1,16 @@
+@import "../SCSS/partials/colors";
+@import "../SCSS/partials/mixins";
+@import "../SCSS/components/nav";
+@import "../SCSS/partials/first";
+@import "../SCSS/partials/second";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+}

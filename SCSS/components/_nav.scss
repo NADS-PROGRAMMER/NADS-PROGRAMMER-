@@ -1,0 +1,88 @@
+@import "../partials/mixins";
+
+.nav_desktop {
+  display: none;
+}
+.nav_mobile {
+  @include displayFlex(row, space-between, center);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  padding: 1rem;
+  background: white;
+
+  .nav_mobile__logo {
+    width: 8rem;
+  }
+
+  .nav_mobile__menu {
+    width: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav_mobile {
+    display: none;
+  }
+
+  .nav_desktop {
+    display: block;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+  .nav_desktop__main {
+    @include displayFlex(row, space-between, center);
+    background: white;
+    box-shadow: 0px 0px 10px $grayishBlue;
+    padding: 1rem 11rem;
+    // background: red;
+    .nav_desktop__logo {
+      width: 8rem;
+    }
+
+    .nav_desktop__link {
+      @include displayFlex(row, none, none);
+      gap: 2.5rem;
+      list-style-type: none;
+
+      li {
+        @include displayFlex(row, center, center);
+        text-align: center;
+        height: 100%;
+
+        a {
+          @include displayFlex(row, center, center);
+          text-decoration: none;
+          color: $grayishBlue;
+          width: 100%;
+          position: relative;
+        }
+
+        a::after {
+          display: none;
+          content: " ";
+          position: absolute;
+          height: 0.2rem;
+          width: inherit;
+          background: $limeGreen;
+          top: 230%;
+          transition: all 100ms;
+        }
+
+        a:hover::after {
+          display: block;
+        }
+      }
+    }
+
+    .nav_desktop__button {
+      padding: 0.8rem 1.8rem;
+      font-size: 0.8rem;
+    }
+  }
+}
