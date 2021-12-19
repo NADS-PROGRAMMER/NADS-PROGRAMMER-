@@ -3,6 +3,7 @@
 @import "../SCSS/components/nav";
 @import "../SCSS/partials/first";
 @import "../SCSS/partials/second";
+@import "../SCSS/partials/third";
 
 * {
   margin: 0;
@@ -11,6 +12,9 @@
   font-family: "Public Sans", sans-serif;
 }
 
+body {
+  background: $veryLightGray;
+}
 img {
   width: 100%;
 }

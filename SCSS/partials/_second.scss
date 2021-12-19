@@ -99,7 +99,7 @@
     @include displayFlex(row, none, center);
     flex-wrap: wrap;
     .infos__item {
-      flex: 1 1 5rem;
+      flex: 1 1 15rem;
       align-items: flex-start;
 
       * {
