@@ -193,6 +193,8 @@
   outline: none;
   padding: 0.8rem 2.5rem;
   border-radius: 25px;
+  padding: 0.8rem 2rem;
+  font-size: 0.8rem;
 }
 
 .div_first__button:hover::after {
@@ -210,6 +212,13 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+@media only screen and (min-width: 540px) {
+  .div_first__details {
+    width: 30em;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -240,7 +249,7 @@
             align-items: center;
     padding: 10rem;
     height: 90vh;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .div_first__img-container {
     height: 100%;
@@ -271,6 +280,8 @@
             align-items: flex-start;
     gap: 1.1rem;
     padding-top: 8rem;
+    width: auto;
+    margin: 0;
   }
   .div_first__title {
     width: 15ch;
@@ -299,6 +310,9 @@
   }
 }
 
+/** 
+  THIS STYLE IS MOBILE-FIRST APPROACH.
+*/
 .div_second__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -343,6 +357,7 @@
   width: 10ch;
   font-size: 2rem;
   font-weight: 400;
+  color: #2d314d;
 }
 
 .div_second__title-section .title_section__paragraph {

@@ -43,6 +43,9 @@
   outline: none;
   padding: 0.8rem 2.5rem;
   border-radius: 25px;
+
+  padding: 0.8rem 2rem;
+  font-size: 0.8rem;
 }
 
 // show the ::after in hover
@@ -63,6 +66,12 @@
   right: 0;
 }
 
+@media only screen and (min-width: 540px) {
+  .div_first__details {
+    width: 30em;
+    margin: 0 auto;
+  }
+}
 @media only screen and (min-width: 768px) {
   .div_first__first-image-desktop {
     max-height: 100vh;
@@ -80,7 +89,7 @@
     @include displayFlex(row-reverse, space-between, center);
     padding: 10rem;
     height: 90vh;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 
   .div_first__img-container {
@@ -110,6 +119,8 @@
     align-items: flex-start;
     gap: 1.1rem;
     padding-top: 8rem;
+    width: auto;
+    margin: 0;
   }
 
   .div_first__title {
