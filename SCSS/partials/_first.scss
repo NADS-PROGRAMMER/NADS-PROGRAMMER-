@@ -108,7 +108,7 @@
   .div_first__first-image-desktop {
     position: absolute;
     display: inline-block;
-    width: 80%;
+    width: inherit;
     left: 50%;
     right: 0;
     top: -1%;
@@ -144,6 +144,7 @@
 
   .div_first__first-image-desktop {
     left: 45%;
+    width: 80%;
   }
 
   .div_first__title {

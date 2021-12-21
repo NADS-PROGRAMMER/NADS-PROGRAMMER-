@@ -1,0 +1,100 @@
+footer {
+  @include displayFlex(column, none, center);
+  background: $darkBlue;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.footer--img_section {
+  @include displayFlex(column, none, center);
+  gap: 2.5rem;
+  svg {
+    display: block;
+    .text-path {
+      fill: white;
+    }
+  }
+
+  .logos {
+    @include displayFlex(row, none, none);
+    gap: 1rem;
+    // img {
+    //   display: block;
+    //   width: 2rem;
+    // }
+    svg {
+      cursor: pointer;
+      path {
+        fill: $white;
+      }
+    }
+
+    svg:hover path {
+      fill: $limeGreen;
+      cursor: pointer;
+    }
+  }
+}
+
+.links {
+  @include displayFlex(column, none, center);
+  gap: 1rem;
+  .first-links,
+  .second-links {
+    @include displayFlex(column, none, center);
+    gap: 1rem;
+
+    span {
+      color: $white;
+      cursor: pointer;
+    }
+    span:hover {
+      color: $limeGreen;
+    }
+  }
+}
+
+.footer--cta {
+  @include displayFlex(column, none, center);
+  gap: 1.5rem;
+  .cta--button {
+    font-size: 1rem;
+    padding: 1em 3em;
+  }
+
+  .copyright {
+    color: $grayishBlue;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  footer {
+    @include displayFlex(row, none, none);
+    padding: 5rem 11%;
+    gap: 10rem;
+  }
+
+  .footer--img_section {
+    @include displayFlex(column, none, flex-start);
+  }
+
+  .links {
+    @include displayFlex(row, none, flex-start);
+
+    gap: 5rem;
+    .first-links,
+    .second-links {
+      @include displayFlex(column, none, flex-start);
+    }
+  }
+
+  .footer--cta {
+    @include displayFlex(column, none, flex-end);
+    margin-left: auto;
+
+    .cta--button {
+      font-size: 0.875rem;
+      padding: 1em 3em;
+    }
+  }
+}
