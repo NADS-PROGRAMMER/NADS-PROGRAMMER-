@@ -87,7 +87,7 @@
 
   .div_first__content {
     @include displayFlex(row-reverse, space-between, center);
-    padding: 10rem;
+    padding: 10% 8rem;
     height: 90vh;
     overflow: hidden;
   }
@@ -138,6 +138,9 @@
 }
 
 @media only screen and (min-width: 1500px) {
+  .div_first__content {
+    padding: 10%;
+  }
   .div_first__mockup {
     max-width: 50vw;
   }
