@@ -74,7 +74,7 @@
 @media only screen and (min-width: 1200px) {
   .div_second__content {
     align-items: flex-start;
-    padding: 10%;
+    padding: 10% 8rem;
     * {
       width: 100%;
     }
@@ -114,6 +114,9 @@
 }
 
 @media only screen and (min-width: 1500px) {
+  .div_second__content {
+    padding: 10%;
+  }
   .div_second__title-section {
     .title_section__title {
       font-size: 3rem;
