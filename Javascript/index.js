@@ -3,22 +3,41 @@
     const easeDuration = .8;
     const yValue = "100%"
 
+// Events when the hamburger icon is clicked
 document.querySelector('.nav_mobile__menu').addEventListener('click', () => {
 
+    /**
+     * So for this, I use a fromTo function of gsap
+     * so that we don't need to set by default the opacity and y position of the 
+     * modal in the CSS. */
     document.querySelector('.modal-container').style.display = 'block'
     gsap.fromTo(".modal", {opacity: 0, y: "-100%"}, {opacity: 1, y: "0%", duration: .3})
     document.body.style.overflow = 'hidden';
+    document.body.parentElement.style.overflow = 'hidden'
 })
 
+
+// Event when the outside part of the modal is clicked.
 document.querySelector('.modal-container').addEventListener('click', (e) => {
 
-    // animate the modal, then diplay to none the container
+/**
+ * So for this, I use a fromTo function of gsap
+ * so that we don't need to set by default the opacity and y position of the 
+ * modal in the CSS.
+ * 
+ * We use a .then function so that the display to none of the container
+ * must happen if the animation is done. */
 
     gsap.fromTo(".modal", {opacity: 1, y: "0%"}, {opacity: 0, y: "-100%", duration: .3})
     .then(() => e.target.style.display = 'none');
     document.body.style.overflowY = 'auto';
+    document.body.parentElement.style.overflowY = 'auto'
 })
 
+// Stop the even to propagate when the modal itself is clicked.
+document.querySelector('.modal').addEventListener('click', (e) => e.stopPropagation())
+
+// This is the scroll event. Also for the scroll animation.
 window.addEventListener('scroll', (e) => {
 
     document.body.style.overflowX = 'hidden';
@@ -36,6 +55,7 @@ window.addEventListener('scroll', (e) => {
     const thirdInfo = document.querySelector('#third-info')
     const fourthInfo = document.querySelector('#fourth-info')
 
+    // For the article section
     const articleSectionTitle = document.querySelector('.title-section__title');
     const firstArticle = document.querySelector('#first-article');
     const secondArticle = document.querySelector('#second-article');
