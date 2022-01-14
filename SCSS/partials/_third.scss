@@ -23,13 +23,13 @@
     border: 1px solid $lightGrayishBlue;
     border-radius: 5px;
     max-height: 40em;
-    // transform: translateY(100%);
-    // opacity: 0;
+
     figure {
       img {
         border-radius: 5px 5px 0px 0px;
       }
     }
+
     .article-section {
       @include displayFlex(column, none, none);
       padding: 2rem;
@@ -78,21 +78,12 @@
     gap: 2rem;
 
     .article {
-      // flex: 1 1 15rem;
-      // max-width: 19rem;
-      // flex: 1 0 40rem;
-      // flex: 1 1 5rem;
       max-width: 17em;
-      // width: fit-content;
 
       figure {
-        // display: block;
-        // max-height: 240px;
-        // height: 100%;
-        // object-fit: contain;
         height: 13rem;
         width: 17em;
-        // width: 12rem;
+
         img {
           height: inherit;
           width: inherit;
@@ -130,13 +121,14 @@
   .articles {
     flex-wrap: wrap;
     gap: 3rem;
+
     .article {
       flex: 1 1 25rem;
       max-width: 20em;
+
       figure {
         width: 20em;
       }
-
       .article-section {
         padding: 1.5rem 2rem;
       }

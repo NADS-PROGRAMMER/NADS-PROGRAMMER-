@@ -1,23 +1,28 @@
 @import "../partials/mixins";
 
+/** BY DEFAULT: The navbar for desktop screen sizes are hidden. */
 .nav_desktop {
   display: none;
 }
+
+/** This is the style for the navbar for mobile screen sizes. */
 .nav_mobile {
   @include displayFlex(row, space-between, center);
+  box-shadow: 0px 0px 10px $lightGrayishBlue;
+  background: white;
   position: fixed;
+  padding: 1rem;
   top: 0;
   right: 0;
   left: 0;
   z-index: 2;
-  padding: 1rem;
-  background: white;
-  box-shadow: 0px 0px 10px $lightGrayishBlue;
 
+  // easybank logo
   .nav_mobile__logo {
     width: 8rem;
   }
 
+  // easybank menu icon
   .nav_mobile__menu {
     width: 2rem;
   }
@@ -36,20 +41,23 @@
     top: 0;
     z-index: 2;
   }
+
   .nav_desktop__main {
     @include displayFlex(row, space-between, center);
-    background: white;
     box-shadow: 0px 0px 10px $lightGrayishBlue;
+    background: white;
     padding: 1rem 11rem;
-    // background: red;
+
+    // easybank logo
     .nav_desktop__logo {
       width: 8rem;
     }
 
+    // ul of the navbar
     .nav_desktop__link {
       @include displayFlex(row, none, none);
-      gap: 2.5rem;
       list-style-type: none;
+      gap: 2.5rem;
 
       li {
         @include displayFlex(row, center, center);
@@ -60,17 +68,17 @@
           @include displayFlex(row, center, center);
           text-decoration: none;
           color: $grayishBlue;
-          width: 100%;
           position: relative;
+          width: 100%;
         }
 
         a::after {
-          display: none;
           content: " ";
+          background: $limeGreen;
           position: absolute;
+          display: none;
           height: 0.2rem;
           width: inherit;
-          background: $limeGreen;
           top: 230%;
           transition: all 100ms;
         }
@@ -81,6 +89,7 @@
       }
     }
 
+    // 'Request Invite Button'
     .nav_desktop__button {
       padding: 0.8rem 1.8rem;
       font-size: 0.8rem;
